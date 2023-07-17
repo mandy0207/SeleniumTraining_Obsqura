@@ -1,14 +1,18 @@
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DifferentBrowsers {
  
-    static WebDriver driver;
+//  static WebDriver driver;
 	public static void main(String[] args) {
-		 
-		   
-		String browser = "edge";
+		 WebDriver driver=null;;
+		  
+		String browser = "chrome";
 		
 		if(browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
@@ -19,10 +23,17 @@ public class DifferentBrowsers {
 		}
 		
 		else if(browser.equals("edge")) {
-			System.setProperty("webdriver.chrome.driver",
+			System.setProperty("webdriver.mandy.driver",
 					"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\msedgedriver.exe");
 			
 			    driver = new EdgeDriver();
+		}
+		
+		else if(browser.equals("firefox")) {
+			System.setProperty("webdriver.firefox.driver",
+					"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\geckodriver.exe");
+			
+			    driver = new FirefoxDriver();
 		}
 		
 		else {
@@ -39,7 +50,8 @@ public class DifferentBrowsers {
 		driver.quit();
 		
 	
-
+		
+		
 	}
 
 }
