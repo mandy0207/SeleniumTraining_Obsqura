@@ -20,13 +20,18 @@ public class LearnXpath {
 	 *  
 	 * 2) //tagname
 	 * 3) (//tagname[@attribute='value'])[2], (//tagname[@attribute='value'])[2]
-	 * 4) 
+	 * 
+	 * 4) //*[contains(text(),'Text')]
+	 * 5)
 	 * 
 	 */
 		driver.findElement(By.xpath("//a[@class='ico-login']")).click();
 		driver.findElement(By.xpath("//input[@id='Email']")).sendKeys("obsqura24@gmail.com");
 		driver.findElement(By.xpath("(//div[@class='inputs'])[2]/input")).sendKeys("mypassword");
 		driver.findElement(By.xpath("//*[@value='Log in']")).click();
+		driver.findElement(By.xpath("(//*[@class='list'])[1]/li[4]/a")).click();
+		
+	    driver.findElement(By.xpath("//*[contains(text(),'Casual Golf Belt')]")).click();
 		
 
 	}
