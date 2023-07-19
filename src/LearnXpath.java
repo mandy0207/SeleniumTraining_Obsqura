@@ -23,7 +23,9 @@ public class LearnXpath {
 	 * 3) (//tagname[@attribute='value'])[2], (//tagname[@attribute='value'])[2]
 	 * 
 	 * 4) //*[contains(text(),'Text')]
-	 * 5)
+	 * 5) //button[contains(@class,'submit')] - using regular expression
+	 * 
+	 * 
 	 * 
 	 */
 		driver.findElement(By.xpath("//a[@class='ico-login']")).click();
@@ -33,6 +35,7 @@ public class LearnXpath {
 		driver.findElement(By.xpath("(//*[@class='list'])[1]/li[4]/a")).click();
 	
 	    driver.findElement(By.xpath("//*[@class='product-title']//*[contains(text(),'Casual')]")).click();
+	    //we are using regular expression xpath here
 	    WebElement qtyBox = driver.findElement(By.xpath("//*[contains(@id,'_EnteredQuantity')]"));
 	    qtyBox.clear();
 	    qtyBox.sendKeys("3");
