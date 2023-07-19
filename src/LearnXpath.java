@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LearnXpath {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\chromedriver.exe");
@@ -30,8 +30,8 @@ public class LearnXpath {
 		driver.findElement(By.xpath("(//div[@class='inputs'])[2]/input")).sendKeys("mypassword");
 		driver.findElement(By.xpath("//*[@value='Log in']")).click();
 		driver.findElement(By.xpath("(//*[@class='list'])[1]/li[4]/a")).click();
-		
-	    driver.findElement(By.xpath("//*[contains(text(),'Casual Golf Belt')]")).click();
+	
+	    driver.findElement(By.xpath("//*[@class='product-title']//*[contains(text(),'Casual')]")).click();
 		
 
 	}
