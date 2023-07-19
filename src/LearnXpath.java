@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LearnXpath {
@@ -32,6 +33,11 @@ public class LearnXpath {
 		driver.findElement(By.xpath("(//*[@class='list'])[1]/li[4]/a")).click();
 	
 	    driver.findElement(By.xpath("//*[@class='product-title']//*[contains(text(),'Casual')]")).click();
+	    WebElement qtyBox = driver.findElement(By.xpath("//*[contains(@id,'_EnteredQuantity')]"));
+	    qtyBox.clear();
+	    qtyBox.sendKeys("3");
+	    
+	    driver.quit();
 		
 
 	}
