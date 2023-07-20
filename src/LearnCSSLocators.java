@@ -36,7 +36,7 @@ public class LearnCSSLocators {
 		driver.findElement(By.cssSelector(".password")).sendKeys("mypassword");
 		//driver.findElement(By.cssSelector(".button-1.login-button")).click();
 		driver.findElement(By.cssSelector("input[value='Log in']")).click();
-		driver.findElement(By.cssSelector("[class='list'] li:nth-child(4) a")).click();
+		driver.findElement(By.cssSelector("[class='list'] li:nth-child(5) a")).click();
 		driver.findElement(By.cssSelector("a[title*='3rd Album'] img")).click();
 		
 		
