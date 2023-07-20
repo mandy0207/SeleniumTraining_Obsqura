@@ -20,7 +20,7 @@ public class LearnXpath {
 	 * 1) //tagname[@attribute='value']
 	 *  
 	 * 2) //tagname
-	 * 3) (//tagname[@attribute='value'])[2], (//tagname[@attribute='value'])[2]
+	 * 3) (//tagname[@attribute='value'])[1], (//tagname[@attribute='value'])[2]  --- xpath indexing
 	 * 
 	 * 4) //*[contains(text(),'Text')]
 	 * 5) //button[contains(@class,'submit')] - using regular expression
