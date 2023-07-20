@@ -23,7 +23,12 @@ public class LearnCSSLocators {
 		 * 4) if you have enough attrbutes ;general syntax for css locator is
 		 *    tagname[attribute ='value']  or [attribute='value']
 		 * 
+		 * 5) Tagname[@attribute=’value’]:nth-child(index)
+		 *
+		 *  6) using regular expressions = input[type*='pass']
 		 */
+
+
 		
 		driver.findElement(By.cssSelector(".ico-login")).click();
 		driver.findElement(By.cssSelector("#Email")).sendKeys("obsqura24@gmail.com");
@@ -32,7 +37,7 @@ public class LearnCSSLocators {
 		//driver.findElement(By.cssSelector(".button-1.login-button")).click();
 		driver.findElement(By.cssSelector("input[value='Log in']")).click();
 		driver.findElement(By.cssSelector("[class='list'] li:nth-child(4) a")).click();
-		
+		driver.findElement(By.cssSelector("a[title*='3rd Album'] img")).click();
 		
 		
 	}
