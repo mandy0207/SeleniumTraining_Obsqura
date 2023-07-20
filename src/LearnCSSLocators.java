@@ -12,7 +12,28 @@ public class LearnCSSLocators {
 		driver.manage().window().maximize();
 		driver.get("https://demowebshop.tricentis.com/");
 		
+		/** Css Syntaxes
+		 * 
+		 * 1) if className is unique = .ClassName
+		 * 2) if we have id = #id
+		 * 3) if we have multiple classes we can ommit space between them and use . operator
+		 *  eg <input class="button-1 login-button valid", name="password>
+		 *  css locator can be = .button-1.login-button
+		 * 
+		 * 4) if you have enough attrbutes ;general syntax for css locator is
+		 *    tagname[attribute ='value']  or [attribute='value']
+		 * 
+		 */
+		
 		driver.findElement(By.cssSelector(".ico-login")).click();
+		driver.findElement(By.cssSelector("#Email")).sendKeys("obsqura24@gmail.com");
+		
+		driver.findElement(By.cssSelector(".password")).sendKeys("mypassword");
+		//driver.findElement(By.cssSelector(".button-1.login-button")).click();
+		driver.findElement(By.cssSelector("input[value='Log in']")).click();
+		driver.findElement(By.cssSelector("[class='list'] li:nth-child(4) a")).click();
+		
+		
 		
 	}
 
