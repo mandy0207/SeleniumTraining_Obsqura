@@ -42,8 +42,15 @@ public class UnderstandingWebElements {
         int pNumber = products.size(); 
         
 		Assert.assertEquals(pNumber,itemNumbers);
-
-    
+		
+		driver.findElement(By.cssSelector("#checkout")).click();
+		
+		driver.findElement(By.cssSelector("#first-name")).sendKeys("Mandy");
+		driver.findElement(By.id("last-name")).sendKeys("Singh");
+		driver.findElement(By.cssSelector("#postal-code")).sendKeys("143521");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("finish")).click();
+		
 	}
 
 }
