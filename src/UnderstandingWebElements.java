@@ -30,10 +30,9 @@ public class UnderstandingWebElements {
 		
 		List<WebElement> addToCart = driver.findElements(By.cssSelector(".btn_small.btn_inventory"));
 		System.out.println("Size of List = "+addToCart.size());
-		addToCart.get(1).click();
-//		for(int i =0;i<addToCart.size();i++) {
-//			addToCart.get(i).click();
-//		}
+		for(int i =0;i<addToCart.size();i++) {
+			addToCart.get(i).click();
+		}
 
 	}
 
