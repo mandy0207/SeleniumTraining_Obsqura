@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class UnderstandingWebElements {
 
@@ -29,11 +30,20 @@ public class UnderstandingWebElements {
 
 		
 		List<WebElement> addToCart = driver.findElements(By.cssSelector(".btn_small.btn_inventory"));
+		int itemNumbers = addToCart.size();
 		System.out.println("Size of List = "+addToCart.size());
+		
 		for(int i =0;i<addToCart.size();i++) {
 			addToCart.get(i).click();
 		}
+		
+		driver.findElement(By.cssSelector(".shopping_cart_link")).click();
+		List<WebElement> products = driver.findElements(By.cssSelector(".cart_item"));
+        int pNumber = products.size(); 
+        
+		Assert.assertEquals(pNumber,itemNumbers);
 
+    
 	}
 
 }
