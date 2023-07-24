@@ -31,15 +31,9 @@ public class SimpleStaticDropDown {
 		staticDropdown.selectByValue("Yellow");
 		Thread.sleep(2000);
 		
-		
-		
 		staticDropdown.selectByIndex(3);
 		Thread.sleep(2000);
-		
 		staticDropdown.selectByVisibleText("Red");
-		
-
-
 		//driver.close();	
 
 	}
