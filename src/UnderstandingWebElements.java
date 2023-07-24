@@ -51,6 +51,14 @@ public class UnderstandingWebElements {
 		driver.findElement(By.id("continue")).click();
 		driver.findElement(By.id("finish")).click();
 		
+		String actualtext = driver.findElement(By.cssSelector(".complete-header")).getText();
+		System.out.println("Actual Text="+actualtext);
+		Assert.assertEquals(actualtext, "Thank you for your order!");
+		
+	
+		driver.quit();
+		
+		
 	}
 
 }
