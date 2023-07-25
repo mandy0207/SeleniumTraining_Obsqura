@@ -45,7 +45,7 @@ public class HandlingStaticDropdown {
 //			System.out.println("Text present = "+element.getText());
 //		}
 
-		//driver.close();	
+		driver.quit();	
 	}
 	
 	public static void GetText(String str, String ExpectedText) {

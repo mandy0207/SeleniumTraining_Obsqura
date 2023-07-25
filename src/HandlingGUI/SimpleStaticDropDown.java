@@ -34,7 +34,7 @@ public class SimpleStaticDropDown {
 		staticDropdown.selectByIndex(3);
 		Thread.sleep(2000);
 		staticDropdown.selectByVisibleText("Red");
-		//driver.close();	
+		driver.quit();
 
 	}
 
