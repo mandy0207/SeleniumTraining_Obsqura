@@ -30,7 +30,7 @@ public class HandlingDynamicDropdown {
 	    	}
 	    }
 	    
-	    driver.close();
+	  driver.quit();
 		
 
 	}
