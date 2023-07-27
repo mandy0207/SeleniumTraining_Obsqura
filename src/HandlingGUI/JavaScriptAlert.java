@@ -17,7 +17,7 @@ public class JavaScriptAlert {
 		driver.get("https://selenium.obsqurazone.com/javascript-alert.php");
 
 		driver.findElement(By.xpath(" //button[@class='btn btn-success']")).click();
-		
+
 		Thread.sleep(2000);
 		Alert alert = driver.switchTo().alert();
 		/**
@@ -28,11 +28,20 @@ public class JavaScriptAlert {
 		 * We can accept alert by using accept() method
 		 */
 		alert.accept();
-		
-		
-		
-		
-		
+
+		/**
+		 * Here we are clicking second alert
+		 */
+
+		driver.findElement(By.xpath("//*[@class='btn btn-warning']")).click();
+		Thread.sleep(2000);
+		System.out.println(alert.getText());
+		/**
+		 * dismiss() is used to cancel the alert
+		 */
+		// alert.dismiss();
+		alert.dismiss();
+
 	}
 
 }
