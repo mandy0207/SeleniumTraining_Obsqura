@@ -16,6 +16,7 @@ public class HandlingRadioButtons_CheckBoxes {
 		driver.get("https://selenium.obsqurazone.com/check-box-demo.php");
 		
 		WebElement checkBox = driver.findElement(By.xpath("//*[@id='gridCheck']"));
+	
 		System.out.println("Is my checkbox selected: "+checkBox.isSelected());
 	
 		checkBox.click();
