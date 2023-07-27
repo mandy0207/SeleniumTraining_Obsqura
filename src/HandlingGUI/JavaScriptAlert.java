@@ -20,8 +20,16 @@ public class JavaScriptAlert {
 		
 		Thread.sleep(2000);
 		Alert alert = driver.switchTo().alert();
+		/**
+		 * We can grab text of alert by using getText() method
+		 */
 		System.out.println(alert.getText());
+		/**
+		 * We can accept alert by using accept() method
+		 */
 		alert.accept();
+		
+		
 		
 		
 		
