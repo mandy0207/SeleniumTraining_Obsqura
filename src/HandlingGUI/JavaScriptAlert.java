@@ -20,8 +20,9 @@ public class JavaScriptAlert {
 		
 		Thread.sleep(2000);
 		Alert alert = driver.switchTo().alert();
-		
+		System.out.println(alert.getText());
 		alert.accept();
+		
 		
 		
 	}
