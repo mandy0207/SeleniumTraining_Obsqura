@@ -41,6 +41,8 @@ public class JavaScriptAlert {
 		 */
 		// alert.dismiss();
 		alert.dismiss();
+		
+		
 
 	}
 
