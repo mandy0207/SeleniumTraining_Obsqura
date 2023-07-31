@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ChildWindow {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\chromedriver.exe");
@@ -36,10 +36,13 @@ public class ChildWindow {
 		String TextPresent = driver.findElement(By.xpath("//h3")).getText();
 		System.out.println("Text Present on page="+TextPresent);
 		
+		Thread.sleep(2000);
+		driver.close();
 		driver.switchTo().window(parentWindow);
 		
 		System.out.println(driver.getTitle());
 		
+		//driver.quit();
 	}
 
 }
