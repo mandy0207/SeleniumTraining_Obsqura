@@ -22,7 +22,6 @@ public class HnadlingFrames {
 		 *  using id or name of frame, using index of frame or using webelement of frame
 		 */
 		
-		
 		driver.switchTo().frame("mce_0_ifr");
 		
 		WebElement msgBox=driver.findElement(By.cssSelector("[id='tinymce'] "));
