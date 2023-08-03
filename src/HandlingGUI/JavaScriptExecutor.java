@@ -26,6 +26,7 @@ public class JavaScriptExecutor {
 		WebElement firstName = driver.findElement(By.xpath("//*[@id='validationCustom01']"));
 
 		WebElement lastName = driver.findElement(By.xpath("//*[@id='validationCustom02']"));
+	
 		Thread.sleep(2000);
 		/**
 		 * 
@@ -33,7 +34,14 @@ public class JavaScriptExecutor {
 		 */
 		js.executeScript("arguments[0].value='Misha';", firstName);
 		js.executeScript("arguments[0].value='Dass';", lastName);
-
+		
+        WebElement submitBtn = driver.findElement(By.xpath("//*[@type='submit']"));
+        /**
+		 * To click on an element using javascript executor
+		 */
+        js.executeScript("arguments[0].click();", submitBtn);
+        
+        
 	}
 
 }
