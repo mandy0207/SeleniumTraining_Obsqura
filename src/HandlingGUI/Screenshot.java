@@ -22,14 +22,17 @@ public class Screenshot {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
 		driver.get("https://www.amazon.ca/");
-		 
+		  
+		/**
+		 * Cast your driver to TakesScreenshot Interface
+		 * call getScreenshotmethod and you can recieve a file as an output
+		 * copy the file in your desired directory/folder
+		 */
+		
 		      TakesScreenshot scrshot = (TakesScreenshot)driver;
 		      File srcfile=scrshot.getScreenshotAs(OutputType.FILE);
-		      
-		      File destfile = new File("C:\\Sask\\Code\\workspace\\MyFirstJavaProject\\screenshot.png");
-		      
+		      File destfile = new File("C:\\Sask\\Code\\workspace\\MyFirstJavaProject\\screenshot.png"); 
 		      FileUtils.copyFile(srcfile, destfile);
-		      
 		      driver.quit();
 		     
 		      
