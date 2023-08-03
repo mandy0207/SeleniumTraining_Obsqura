@@ -88,5 +88,6 @@
 	<classpathentry kind="lib" path="C:/Users/msingh/Desktop/Selenium Session/Selenium Jars/lib/reactive-streams-1.0.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/msingh/Desktop/Selenium Session/Selenium Jars/lib/slf4j-api-2.0.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/msingh/Downloads/testng-7.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/msingh/Downloads/commons-io-2.13.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

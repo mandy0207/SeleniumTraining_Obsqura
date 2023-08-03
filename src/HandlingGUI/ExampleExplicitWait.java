@@ -28,7 +28,7 @@ public class ExampleExplicitWait {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='finish']")));
 		String text = driver.findElement(By.xpath("//*[@id='finish']")).getText();
 		
-		wait.until(ExpectedConditions.alertIsPresent());
+		
 		System.out.println(text);
 
 	}
