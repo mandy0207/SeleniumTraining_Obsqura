@@ -3,6 +3,7 @@ package HandlingGUI;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +19,7 @@ public class Learning_Waits {
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 		
 		driver.get("https://selenium.obsqurazone.com/dynamic-load.php");
 	
@@ -35,26 +36,18 @@ public class Learning_Waits {
 		driver.findElement(By.xpath("//a[@id='progress-bars']")).click();
 		driver.findElement(By.xpath("//*[@id='downloadButton']")).click();
 		
-
-	
-    WebElement progressBar=driver.findElement(By.cssSelector("div[class='progress-label']"));
-
-
+        WebElement progressBar=driver.findElement(By.cssSelector("div[class='progress-label']"));
+     
 		/**
 		 * Explicit Wait
 		 */
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	
-		
+        
+        WebDriverWait wait =  new WebDriverWait(driver,Duration.ofSeconds(12));
 		wait.until(ExpectedConditions.textToBePresentInElement(progressBar, "Complete!"));
-		
-     	WebElement closeBtn = driver.findElement(By.cssSelector("button[class='ui-button ui-corner-all ui-widget']"));
-     	System.out.println(closeBtn.getText());
+		 WebElement closeBtn = driver.findElement(By.cssSelector("button[class='ui-button ui-corner-all ui-widget']"));
+		System.out.println(closeBtn.getText());
 
      	closeBtn.click();
-		
-	
-		
 		
 
 
