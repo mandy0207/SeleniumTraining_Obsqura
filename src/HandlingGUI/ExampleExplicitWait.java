@@ -26,11 +26,12 @@ public class ExampleExplicitWait {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='finish']")));
+	
 		String text = driver.findElement(By.xpath("//*[@id='finish']")).getText();
 		
 		
 		System.out.println(text);
+		driver.quit();
 
 	}
-
 }

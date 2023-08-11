@@ -29,14 +29,17 @@ public class KeyboardMouseActions {
 		 */
 		act.moveToElement(others).build().perform();
 		
-		WebElement textBox = driver.findElement(By.cssSelector("[placeholder='Message']"));
+		//To right click on thr element
+		//act.moveToElement(others).contextClick().build().perform();
+		
+		//WebElement textBox = driver.findElement(By.cssSelector("[placeholder='Message']"));
 	
 		//act.moveToElement(textBox).click().sendKeys("jasmine").build().perform();
 		/**
 		 * Keyddown is used to hold key on keyboard
 		 * here in this example we are holding shift key
 		 */
-		act.moveToElement(textBox).click().keyDown(Keys.SHIFT).sendKeys("misha").build().perform();
+		//act.moveToElement(textBox).click().keyDown(Keys.SHIFT).sendKeys("misha").build().perform();
 		
 		
 	}
