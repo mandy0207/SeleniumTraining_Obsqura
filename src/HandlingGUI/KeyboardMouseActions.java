@@ -5,15 +5,19 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
 public class KeyboardMouseActions {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\chromedriver.exe");
+				"C:\\Users\\msingh\\Desktop\\Chrome 115x\\chromedriver.exe");
+		
+		ChromeOptions opts = new ChromeOptions();
+		opts.setBinary("C:\\Users\\msingh\\Desktop\\Chrome 115x\\chrome-win64//Chrome.exe");
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(opts);
 		driver.manage().window().maximize();
 		driver.get("https://selenium.obsqurazone.com/simple-form-demo.php");
 		
@@ -29,8 +33,9 @@ public class KeyboardMouseActions {
 		 */
 		act.moveToElement(others).build().perform();
 		
-		//To right click on thr element
-		//act.moveToElement(others).contextClick().build().perform();
+		//To right click on the element
+		act.moveToElement(others).contextClick().build().perform();
+		//act.moveToElement(others).doubleClick().build().perform();
 		
 		//WebElement textBox = driver.findElement(By.cssSelector("[placeholder='Message']"));
 	
