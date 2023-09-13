@@ -9,10 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 public class SimpleStaticDropDown {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\chromedriver.exe");
-
-		WebDriver driver = new ChromeDriver();
+		
+        WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://selenium.obsqurazone.com/select-input.php");
 		/**

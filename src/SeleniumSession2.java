@@ -5,8 +5,7 @@ public class SeleniumSession2 {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\chromedriver.exe");
+		
 
 		/**
 		 * Below statement initiates a driver and open the browser window
@@ -16,7 +15,6 @@ public class SeleniumSession2 {
 		driver.manage().window().maximize();
 
 		
-		System.out.println(driver);
 		/**
 		 * get is used to open the page or link
 		 */
@@ -37,6 +35,7 @@ public class SeleniumSession2 {
 		 * close- closes only current window.
 		 * But if there's only one window opened in browser it will close
 		 */
+		
 		driver.close();     
 		
 		/**

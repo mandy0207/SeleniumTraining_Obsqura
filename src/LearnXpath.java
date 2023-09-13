@@ -7,8 +7,7 @@ public class LearnXpath {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\chromedriver.exe");
+		
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -16,16 +15,11 @@ public class LearnXpath {
 		
 	/**
 	 * xpath syntax 
-	 * 
 	 * 1) //tagname[@attribute='value']
-	 *  
 	 * 2) //tagname
 	 * 3) (//tagname[@attribute='value'])[1], (//tagname[@attribute='value'])[2]  --- xpath indexing
-	 * 
 	 * 4) //*[contains(text(),'Text')]
 	 * 5) //button[contains(@class,'submit')] - using regular expression
-	 * 
-	 * 
 	 * 
 	 */
 		driver.findElement(By.xpath("//a[@class='ico-login']")).click();
@@ -37,6 +31,7 @@ public class LearnXpath {
 	    driver.findElement(By.xpath("//*[@class='product-title']//*[contains(text(),'Casual')]")).click();
 	    //we are using regular expression xpath here
 	    WebElement qtyBox = driver.findElement(By.xpath("//*[contains(@id,'_EnteredQuantity')]"));
+	    
 	    qtyBox.clear();
 	    qtyBox.sendKeys("3");
 	    

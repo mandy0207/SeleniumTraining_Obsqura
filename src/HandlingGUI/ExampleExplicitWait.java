@@ -12,9 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ExampleExplicitWait {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Chrome 115x\\chromedriver.exe");
-		
 		ChromeOptions opts = new ChromeOptions();
 		opts.setBinary("C:\\Users\\msingh\\Desktop\\Chrome 115x\\chrome-win64//Chrome.exe");
 

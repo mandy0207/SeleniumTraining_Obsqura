@@ -11,13 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 public class KeyboardMouseActions {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Chrome 115x\\chromedriver.exe");
-		
-		ChromeOptions opts = new ChromeOptions();
-		opts.setBinary("C:\\Users\\msingh\\Desktop\\Chrome 115x\\chrome-win64//Chrome.exe");
-
-		WebDriver driver = new ChromeDriver(opts);
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://selenium.obsqurazone.com/simple-form-demo.php");
 		

@@ -9,9 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 public class DragDropTest {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\chromedriver.exe");
-
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://demoqa.com/droppable");

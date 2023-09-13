@@ -10,9 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class HandlingDynamicDropdown {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\chromedriver.exe");
-
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://selenium.obsqurazone.com/jquery-select.php");
@@ -23,7 +20,6 @@ public class HandlingDynamicDropdown {
 		
 	    for(int i =0;i<states.size();i++) {
 	    	if(states.get(i).getText().equalsIgnoreCase("New Mexico")) {
-	    		
 	    		states.get(i).click();
 	    		break;
 	    		

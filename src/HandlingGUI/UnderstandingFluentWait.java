@@ -15,13 +15,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 public class UnderstandingFluentWait {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Chrome 115x\\chromedriver.exe");
-		
-		ChromeOptions opts = new ChromeOptions();
-		opts.setBinary("C:\\Users\\msingh\\Desktop\\Chrome 115x\\chrome-win64//Chrome.exe");
 
-		WebDriver driver = new ChromeDriver(opts);
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://the-internet.herokuapp.com/dynamic_controls");
 		driver.findElement(By.xpath("//button[normalize-space()='Remove']")).click();
@@ -46,7 +41,7 @@ public class UnderstandingFluentWait {
 //		     }
 //		   });
 		
-		driver.quit();
+		//driver.quit();
 		
 
 	}

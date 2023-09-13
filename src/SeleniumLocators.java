@@ -12,10 +12,6 @@ public class SeleniumLocators {
 		 * 
 		 * ID, ClassName, Name, LinkText, PartialLinktext
 		 */
-		
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\msingh\\Desktop\\Selenium Session\\driver\\chromedriver.exe");
-
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
